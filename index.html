@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="PT-pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challange 2</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <article class="">
+          <button
+            class="article--button active--article--button"
+            id="btn--1"
+            data-tab="1"
+          >
+            1
+          </button>
+          <div class="article--content">
+            <p>Step 1</p>
+            <div class="title">Your Info</div>
+          </div>
+        </article>
+        <article class="">
+          <button class="article--button" id="btn--2" data-tab="2">2</button>
+          <div class="article--content">
+            <p>Step 2</p>
+            <div class="title">Select plan</div>
+          </div>
+        </article>
+        <article class="">
+          <button class="article--button" id="btn--3" data-tab="3">3</button>
+          <div class="article--content">
+            <p>Step 3</p>
+            <div class="title">Add-ONS</div>
+          </div>
+        </article>
+        <article class="">
+          <button class="article--button" id="btn--4" data-tab="4">4</button>
+          <div class="article--content">
+            <p>Step 4</p>
+            <div class="title">SUMMARY</div>
+          </div>
+        </article>
+      </aside>
+      <main>
+        <section class="section section--active">
+          <div class="section--field header--field">
+            <h1>Personal Info</h1>
+            <p>please provide your name,email address and phone name</p>
+          </div>
+          <div class="section--field">
+            <label>Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="egs: gercio Narciso"
+              class="input--field"
+            />
+          </div>
+          <div class="section--field">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              id="name"
+              placeholder="egs: jonhysmith@gmail.com"
+              class="input--field email"
+            />
+          </div>
+          <div class="section--field">
+            <label>Phone Number</label>
+            <input
+              id="phone"
+              type="text"
+              name="name"
+              class="input--field"
+              placeholder="egs: 841114578"
+            />
+
+            <div class="erro-message hidden">o numero deve ter 9 digitos</div>
+          </div>
+
+          <button class="btn--send go-next" id="left">Next step</button>
+        </section>
+
+        <section class="section ">
+          <div class="section--field header--field">
+            <h1>Select your plan</h1>
+            <p>you have the option of monthly or yearly billing</p>
+          </div>
+
+          <div class="card_container">
+            <div class="card" id="card--1">
+              <img
+                src="./assets/images/icon-arcade.svg"
+                alt="you can see an arcade icon"
+              />
+
+              <article>
+                <div class="title">Arcade</div>
+                <div class="cash">$<span class="cash-amout">9</span>/<span class="unit">mo</span></div>
+                <div class="free--cash hidden">2 months free</div>
+              </article>
+            </div>
+            <div class="card" id="card--2">
+              <img
+                src="./assets/images/icon-advanced.svg"
+                alt="you can see an arcade icon"
+              />
+
+              <article>
+                <div class="title">Advanced</div>
+                <div class="cash">$<span class="cash-amout">12</span>/<span class="unit">mo</span></div>
+                <div class="free--cash hidden">2 months free</div>
+              </article>
+            </div>
+            <div class="card" id="card--3">
+              <img
+                src="./assets/images/icon-pro.svg"
+                alt="you can see an arcade icon"
+              />
+
+              <article>
+                <div class="title">Pro</div>
+                <div class="cash">$<span class="cash-amout">15</span>/<span class="unit">mo</span></div>
+                <div class="free--cash hidden">2 months free</div>
+              </article>
+            </div>
+          </div>
+
+          <article class="period">
+            <label class="period__label active__period__label">Monthly</label>
+            <label for="toggle1" class="toggle-1">
+              <input type="checkbox" id="toggle1" checked class="toggle-1__input" />
+              <span class="toggle-1__button"></span>
+            </label>
+            <label class="period__label ">Yearly</label>
+          </article>
+
+          <div class="action_button">
+            <button class="btn--send go-back">Go Back</button>
+            <button class="btn--send go-next">Next step</button>
+          </div>
+        </section>
+        <section class="section">
+          <div class="section--field header--field">
+            <h1>Pick add-ons</h1>
+            <p>you have the option of monthly or yearly billing</p>
+          </div>
+          <div class="label-container">
+            <label class="input-label" for="check-box--1">
+              <input type="checkbox" class="short--input" id="check-box--1" />
+              <div class="content--label">
+                <h3 class="h3--title">Online Service</h3>
+                <p>Access to multiplayer game</p>
+              </div>
+              <div class="short--label amount">+$<span class="cash-amout">1</span>/<span class="unit">mo</span></div>
+            </label>
+            <label class="input-label" for="check-box--2">
+              <input type="checkbox" class="short--input" id="check-box--2" />
+              <div class="content--label">
+                <h3 class="h3--title">Larger storage</h3>
+                <p>Extra 1TB cloude save</p>
+              </div>
+              <div class="short--label amount">+$<span class="cash-amout">2</span>/<span class="unit">mo</span></div>
+            </label>
+            <label class="input-label" for="check-box--3">
+              <input type="checkbox" class="short--input" id="check-box--3" />
+              <div class="content--label">
+                <h3 class="h3--title">Coztumizable Profile</h3>
+                <p>Custom theme in your Profile</p>
+              </div>
+              <div class="short--label amount">+$<span class="cash-amout">2</span>/<span class="unit">mo</span></div>
+            </label>
+          </div>
+
+          <div class="action_button">
+            <button class="btn--send go-back">Go Back</button>
+            <button class="btn--send go-next">Next step</button>
+          </div>
+        </section>
+        <section class="section ">
+          <div class="section--field header--field">
+            <h1>Finishing Up</h1>
+            <p>Double Cheack everthing looks Ok before confirming</p>
+          </div>
+          <div class="confirm--card">
+            <div class="plan--confirm">
+              <div class="content">
+                <div class="name">
+                  <span id="name_confirm"></span>
+                  <span class="type" id="type_confirm"><span>
+                </div>
+                <p class="link--change">change</p>
+              </div>
+              <span id="cash_confirm" class="cash">$8/mo</span>
+            </div>
+            <div class="services">
+              <!-- <div class="service">
+                <span class="name">name</span>
+                <span class="service-cash">+$1/m</span>
+              </div>
+              <div class="service">
+                <span class="name">name</span>
+                <span class="service-cash">+$1/m</span>
+              </div> -->
+            </div>            
+          </div>
+          <div class="total">
+            <p>Total(permount)</p>
+            <span class="total-cash">+$<span id="cash--soma-total">9</span>/<span class="unit">mo</span></span>
+          </div>
+          <div class="action_button">
+            <button class="btn--send go-back">Go Back</button>
+            <button class="btn--send go-next">Confirm</button>
+          </div>
+        </section>
+
+        <section class="section ">
+          <div class="container--thanks">
+            <img src="./assets/images/icon-thank-you.svg" alt="nos agradecemos pela sua inscricao">
+            <h1>Thank you!</h1>
+            <p>
+              Thanks for confirm your subcription ! we hope you have
+              fun using our platform. if you ver need support, please feel
+              free to email us at support@loremgaming.com.
+            </p>
+          </div>
+          </section>          
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
